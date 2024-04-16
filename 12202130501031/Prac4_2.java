@@ -4,7 +4,7 @@ abstract class Cipher{
     Cipher(String str , int k) {
         text = str ; 
         key = k ; 
-    }
+    }w
     abstract String encryption() ; 
     abstract String decryption() ; 
 
