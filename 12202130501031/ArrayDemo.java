@@ -38,7 +38,7 @@ class Array {
     void average()
     { 
         avg = sum/n; 
-    System.out.println("Average of elements are: " + avg);
+        System.out.println("Average of elements are: " + avg);
     }
 
     void display() {

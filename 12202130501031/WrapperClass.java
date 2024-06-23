@@ -35,5 +35,6 @@ public class WrapperClass{
         Boolean boolWrapper = true; 
         System.out.println("Boolean Wrapper Class:"); 
         System.out.println("Value: " + boolWrapper); 
+
         } 
     }
