@@ -4,6 +4,7 @@ public class Prac5_2 {
     static class StaticInnerClass {
         void display() {
             System.out.println("This is a static inner class");
+            System.out.println();;
         }
     }
 
