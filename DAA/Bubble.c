@@ -68,7 +68,6 @@ int main() {
     time_used3 = ((double)(end3 - start3) ) / CLOCKS_PER_SEC;
     printf("\nTime taken by reverse data : %f seconds\n", time_used3);
     
-    
     printf("\n");
     return 0;
 }
