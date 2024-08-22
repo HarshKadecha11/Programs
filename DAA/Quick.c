@@ -25,13 +25,23 @@ int main() {
     end = clock() ; 
 
     time_used = ((double)(end - start) )/ CLOCKS_PER_SEC ; 
-    printf("The total time taken for normal data is : %f " , time_used) ; 
+    printf("\nThe total time taken for normal data is : %f " , time_used) ; 
 
-    printf("Sorted array: ");
-    for (int i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
+    // printf("Sorted array: ");
+    // for (int i = 0; i < size; i++) {
+    //     printf("%d ", arr[i]);
+    // }
+    // printf("\n");
+    clock_t start2 , end2 ; 
+    double time_used2 ; 
+    start2 = clock() ; 
+    quicksort(arr , p , r) ; 
+    end2 = clock() ; 
+
+    time_used2 = ((double)(end2 - start2) )/ CLOCKS_PER_SEC ; 
+    printf("\nThe total time taken for sorted data is : %f " , time_used2) ; 
+
+
     reverseArray(arr,size) ; 
     clock_t start1 , end1 ; 
     double time_used1 ; 
@@ -40,7 +50,7 @@ int main() {
     quicksort(arr , p , r) ; 
     end1 = clock() ; 
 
-    time_used1 = ((double)(end1 - start1) )/ CLOCKS_PER_SEC ; 
+    time_used1 = ((double)(end1 - start1) )*/ CLOCKS_PER_SEC ; 
     printf("\nThe total time taken for reverse data is : %f " , time_used1) ; 
 
     
