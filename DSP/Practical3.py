@@ -189,12 +189,66 @@ print(f"Triangle: Area = {triangle.area()}, Perimeter = {triangle.perimeter()}")
 print(f"Square: Area = {square.area()}, Perimeter = {square.perimeter()}")
 
 # e) Program to demonstrate use of instance , class and static methods .
+class Example:
+    # Instance method
+    def instance_method(self):
+        print("This is an instance method.")
 
+    # Class method
+    @classmethod
+    def class_method(cls):
+        print("This is a class method.")
+
+    # Static method
+    @staticmethod
+    def static_method():
+        print("This is a static method.")
+
+# Create an instance of the class
+example = Example()
+
+# Call instance method
+example.instance_method()
+
+# Call class method
+Example.class_method()
+
+# Call static method
+Example.static_method()
 
 
 # f) Program to demonstrate the use of access specifiers like public , protected and private .
 
+class Person:
+    def __init__(self, name, age, salary):
+        self.name = name          # Public attribute
+        self._age = age           # Protected attribute
+        self.__salary = salary    # Private attribute
 
+    # Public method to get the private attribute
+    def get_salary(self):
+        return self.__salary
+    # Public method to set the private attribute
+    def set_salary(self, salary):
+        if salary > 0:
+            self.__salary = salary
+        else:
+            print("Salary must be positive!")
+
+# Create an instance of the class
+person = Person("John", 30, 50000)
+
+# Accessing public attribute
+print(f"Name: {person.name}")
+# Accessing protected attribute
+print(f"Age: {person._age}")
+
+# Accessing private attribute using public method
+print(f"Salary: {person.get_salary()}")
+
+# Modifying private attribute using public method
+person.set_salary(60000)
+print(f"Updated Salary: {person.get_salary()}")
 
 
 

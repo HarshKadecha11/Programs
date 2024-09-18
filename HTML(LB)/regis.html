@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        input[type="text"], textarea, select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            margin: 0 5px 0 0;
+        }
+        input[type="submit"] {
+            background-color: #061a07;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form> 
+        <fieldset>
+            <legend>Personal Information</legend>
+            Name: <input type="text" name="Name" placeholder="Enter name" required><br>
+            Address: <textarea rows="4" cols="20" placeholder="Enter address" required></textarea><br>
+            Gender: 
+            Male <input type="radio" name="Gender" value="Male" required>
+            Female <input type="radio" name="Gender" value="Female" required><br>
+            Email: <input type="email" name="email" placeholder="Enter email". required><br><br>
+            Aadhar No: <input type="int" name="Ano"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Banking Info</legend>
+            Account type:
+            <select name="type" required>
+                <option value="Savings">Savings</option>
+                <option value="Joint">Joint</option>
+                <option value="Current">Current</option>
+                <option value="FD">FD</option>
+            </select><br>
+            Account Number: <input type="text" name="accountNumber" placeholder="Enter account number" required><br>
+            IFSC Code: <input type="text" name="ifsc" placeholder="Enter IFSC code" required><br>
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
