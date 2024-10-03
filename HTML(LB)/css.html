@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Child and nth-child Demo</title>
+    <style>
+        /* Style for the first child of any element */
+        p:first-child {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* Style for the nth child (2nd child in this case) */
+        p:nth-child(2) {
+            color: green;
+        }
+
+        /* Style for odd and even children */
+        ul li:nth-child(odd) {
+            background-color: #f4f4f4;
+        }
+        ul li:nth-child(even) {
+            background-color: #e4e4e4;
+        }
+        div:hover p{
+            color: yellow;
+        }
+        ul li:hover {
+            color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>First Child and nth-child Demo</h1>
+    
+    <h2>Paragraph Example</h2>
+    <div>
+        <p>This is the first paragraph.</p>
+        <p>This is the second paragraph.</p>
+        <p>This is the third paragraph.</p>
+    </div>
+
+    <h2>List Example</h2>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</body>
+</html>
