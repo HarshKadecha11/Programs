@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even Checker</title>
+</head>
+<body>
+    <script>
+        // Prompt the user to enter a number
+        var number = parseInt(prompt("Enter a number:", "0"));
+
+        // Check if the input is a valid number
+        if (isNaN(number)) {
+            alert("Please enter a valid number.");
+        } else {
+            // Check if the number is odd or even and display the result
+            if (number % 2 === 0) {
+                alert("The number " + number + " is even.");
+            } else {
+                alert("The number " + number + " is odd.");
+            }
+        }
+    </script>
+</body>
+</html>
