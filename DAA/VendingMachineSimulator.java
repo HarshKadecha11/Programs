@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.LinkedHashMap;
@@ -79,18 +77,6 @@ public class VendingMachineSimulator extends JFrame {
 
         for (int coin : denominations) {
             if (remainingAmount >= coin) {
-                // Use the 500-cent coin only if the amount is 1000 or more
-                if (coin == 500 && remainingAmount < 1000) {
-                    continue;
-                }
-                // Use the 200-cent coin only if the amount is greater than 300
-                if (coin == 200 && remainingAmount <= 300) {
-                    continue;
-                }
-                // Use the 100-cent coin only if the amount is greater than 250
-                if (coin == 100 && remainingAmount <= 250) {
-                    continue;
-                }
                 int count = remainingAmount / coin;
                 change.put(coin, count);
                 remainingAmount %= coin;
@@ -103,13 +89,12 @@ public class VendingMachineSimulator extends JFrame {
     private void displayChange(Map<Integer, Integer> change) {
         resultArea.setText("");
         for (Map.Entry<Integer, Integer> entry : change.entrySet()) {
-            int a = entry.getValue() ; 
-            if(a==1){
+            int a = entry.getValue();
+            if (a == 1) {
                 resultArea.append(a + " note of " + entry.getKey() + " Rupee\n");
-            }else{
+            } else {
                 resultArea.append(a + " notes of " + entry.getKey() + " Rupees\n");
             }
-            
         }
     }
 
