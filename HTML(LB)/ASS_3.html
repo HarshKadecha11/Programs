@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .circle {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .circle1 {
+            background-color: red;
+        }
+        .circle2 {
+            background-color: blue;
+        }
+        .circle3 {
+            background-color: green;
+        }
+        .circle4 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+
+    <script>
+        const circle1 = document.querySelector('.circle1');
+        const circle2 = document.querySelector('.circle2');
+        const circle3 = document.querySelector('.circle3');
+        const circle4 = document.querySelector('.circle4');
+
+        let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        const speed = 2;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        function animate() {
+            // Circle 1: left to right, right to bottom, bottom to left, left to top
+            if (pos1 < width - 50 && pos2 === 0) {
+                pos1 += speed;
+                circle1.style.left = pos1 + 'px';
+            } else if (pos1 >= width - 50 && pos2 < height - 50) {
+                pos2 += speed;
+                circle1.style.top = pos2 + 'px';
+            } else if (pos2 >= height - 50 && pos1 > 0) {
+                pos1 -= speed;
+                circle1.style.left = pos1 + 'px';
+            } else if (pos1 <= 0 && pos2 > 0) {
+                pos2 -= speed;
+                circle1.style.top = pos2 + 'px';
+            }
+
+            // Circle 2: top to bottom, bottom to right, right to top, top to left
+            if (pos3 < height - 50 && pos4 === 0) {
+                pos3 += speed;
+                circle2.style.top = pos3 + 'px';
+            } else if (pos3 >= height - 50 && pos4 < width - 50) {
+                pos4 += speed;
+                circle2.style.left = pos4 + 'px';
+            } else if (pos4 >= width - 50 && pos3 > 0) {
+                pos3 -= speed;
+                circle2.style.top = pos3 + 'px';
+            } else if (pos3 <= 0 && pos4 > 0) {
+                pos4 -= speed;
+                circle2.style.left = pos4 + 'px';
+            }
+
+            // Circle 3: bottom to left, left to top, top to right, right to bottom
+            if (pos2 < height - 50 && pos1 === 0) {
+                pos2 += speed;
+                circle3.style.top = pos2 + 'px';
+            } else if (pos2 >= height - 50 && pos1 < width - 50) {
+                pos1 += speed;
+                circle3.style.left = pos1 + 'px';
+            } else if (pos1 >= width - 50 && pos2 > 0) {
+                pos2 -= speed;
+                circle3.style.top = pos2 + 'px';
+            } else if (pos2 <= 0 && pos1 > 0) {
+                pos1 -= speed;
+                circle3.style.left = pos1 + 'px';
+            }
+
+            // Circle 4: right to top, top to left, left to bottom, bottom to right
+            if (pos4 < width - 50 && pos3 === 0) {
+                pos4 += speed;
+                circle4.style.left = pos4 + 'px';
+            } else if (pos4 >= width - 50 && pos3 < height - 50) {
+                pos3 += speed;
+                circle4.style.top = pos3 + 'px';
+            } else if (pos3 >= height - 50 && pos4 > 0) {
+                pos4 -= speed;
+                circle4.style.left = pos4 + 'px';
+            } else if (pos4 <= 0 && pos3 > 0) {
+                pos3 -= speed;
+                circle4.style.top = pos3 + 'px';
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
