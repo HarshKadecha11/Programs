@@ -1,0 +1,1 @@
+printf("Sequential Search takes %.5f seconds to execute ......" , t1) ;

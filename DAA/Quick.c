@@ -10,7 +10,7 @@ int main() {
     int size ; 
     printf("Enter the size of array : ") ; 
     scanf("%d" , &size) ;
-    int arr[size] ;
+    int arr[size] ; 
     for(int i=0 ; i<size ; i++){
         arr[i] = rand() % size ; 
     }
@@ -28,30 +28,28 @@ int main() {
     printf("\nThe total time taken for normal data is : %f " , time_used) ; 
 
     // printf("Sorted array: ");
-    // for (int i = 0; i < size; i++) {
-    //     printf("%d ", arr[i]);
-    // }
-    // printf("\n");
+    
+    printf("\n");
     clock_t start2 , end2 ; 
     double time_used2 ; 
     start2 = clock() ; 
     quicksort(arr , p , r) ; 
     end2 = clock() ; 
 
-    time_used2 = ((double)(end2 - start2) )/ CLOCKS_PER_SEC ; 
-    printf("\nThe total time taken for sorted data is : %f " , time_used2) ; 
+    // time_used2 = ((double)(end2 - start2) )/ CLOCKS_PER_SEC ; 
+    // printf("\nThe total time taken for sorted data is : %f " , time_used2) ; 
 
 
-    reverseArray(arr,size) ; 
-    clock_t start1 , end1 ; 
-    double time_used1 ; 
+    // reverseArray(arr,size) ; 
+    // clock_t start1 , end1 ; 
+    // double time_used1 ; 
 
-    start1 = clock() ; 
-    quicksort(arr , p , r) ; 
-    end1 = clock() ; 
+    // start1 = clock() ; 
+    // quicksort(arr , p , r) ; 
+    // end1 = clock() ; 
 
-    time_used1 = ((double)(end1 - start1) )*/ CLOCKS_PER_SEC ; 
-    printf("\nThe total time taken for reverse data is : %f " , time_used1) ; 
+    // time_used1 = ((double)(end1 - start1) )*/ CLOCKS_PER_SEC ; 
+    // printf("\nThe total time taken for reverse data is : %f " , time_used1) ; 
 
     
 }
@@ -77,7 +75,8 @@ int Partition(int arr[] , int p , int r) {
     int t = arr[i+1] ;
     arr[i+1] = arr[r] ; 
     arr[r] = t ; 
-    return i+1 ;  
+    return i+1 ; 
+
 }
 
 void reverseArray(int* arr, int size) {
