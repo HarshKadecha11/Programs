@@ -1,0 +1,19 @@
+.harsh:nth-child(odd){
+    background-color: aqua;
+    color:green
+}
+
+a:hover{
+    color:black
+}
+
+div:hover{
+    color:brown;
+    font-size: 10px;
+}
+
+div{
+    margin:0.5cm;
+    border : 5px solid red ; 
+    padding: 2cm;
+}

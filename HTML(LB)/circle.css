@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.circle1 {
+    background-color: red;
+}
+
+.circle2 {
+    background-color: blue;
+}
+
+.circle3 {
+    background-color: green;
+}
+
+.circle4 {
+    background-color: yellow;
+}

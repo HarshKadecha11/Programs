@@ -1,4 +1,4 @@
-f=open("Book1.csv","r")
+f=open("books.csv","r")  
 rows=f.readlines()
 print(rows)
 avg1,avg2,avg3=0,0,0

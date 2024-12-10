@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <title>Animations</title>
+ <style>
+           .forward
+         { 
+           height: 100px;
+           width: 100px;
+           margin: 10px;
+           position: relative;
+           border-radius:50%;
+           display:inline-block;
+           animation-name: movearound;
+           animation-duration:10s;
+           animation-iteration-count: infinite;
+           animation-direction: forward;
+          }
+         .reverse
+         {   
+              height: 100px;
+            width: 100px;
+            margin: 10px;
+            position: relative;
+            border-radius:50%;
+            display:inline-block;
+            animation-name: movearound;
+            animation-duration:10s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+          }
+           @keyframes movearound
+           {
+            0%  {background-color:purple; left:0px; top:0px;}
+            25% {background-color:yellow; left:120px; top:0px;}
+            50% {background-color:blue; left:120px; top:120px;}
+            75% {background-color: green; left:0px; top:120px;}
+            100% {background-color:red; left:0px; top: 0px;}
+           }
+</style>
+</head>
+<body>
+    <div class="forward"></div><br>
+    <div class="reverse"></div><br>
+    <div class="forward"></div><br>
+    <div class="reverse"></div>
+</body>
+   </html>
